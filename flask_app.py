@@ -6,7 +6,7 @@ import pickle
 import numpy as np
 
 app = Flask(__name__)
-model = pickle.load(open('/content/project.pkl', 'rb'))
+model = pickle.load(open('project.pkl', 'rb'))
 def pred(sample_text):
   predictions = model.predict(np.array([sample_text]))
   print(*predictions[0])
